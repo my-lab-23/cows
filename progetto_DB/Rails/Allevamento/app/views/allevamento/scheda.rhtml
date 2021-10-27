@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+</head>
+<body style="background-color: rgb(255, 255, 153);">
+Inserire matricola:
+<form method="post" action="scheda">
+	<%= text_field("matricola", "") %> 
+	<input type="submit" value="Crea scheda.">
+<br><br>
+<table style="text-align: left; width: 834px;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><b>Mucca</b><br>
+      </td>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Nome<br>
+      </td>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @mucca.each do |@item| %>
+	<%= @item.nome %>
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Padre<br>
+      </td>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @mucca.each do |@item| %>
+	<%= @item.padre %>
+	<br />
+	<% end %>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Madre<br>
+      </td>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @mucca.each do |@item| %>
+	<%= @item.madre %>
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">N. matricola<br>
+      </td>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @mucca.each do |@item| %>
+	<%= @item.matricola %>
+	<br />
+	<% end %>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><b>Nascita</b><br>
+      </td>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Data<br>
+      </td>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @mucca.each do |@item| %>
+	<%= @item.data_nascita %>
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Peso<br>
+      </td>
+      <td style="width: 200px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @mucca.each do |@item| %>
+	<%= @item.peso_nascita %> &nbsp; kg
+	<br />
+	<% end %>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><b>Prima fecondazione</b><br>
+      </td>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 200px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Et&agrave;<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @prima.each do |@item| %>
+	<%= @item.eta %> &nbsp; mesi
+	<br />
+	<% end %>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Peso<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @prima.each do |@item| %>
+	<%= @item.peso %>
+	<br />
+	<% end %>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Data<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @feco1.each do |@item| %>
+	<%= @item.data %>
+	<br />
+	<% end %>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table style="text-align: left; height: 85px; width: 834px;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="width: 243px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><b>Lattazioni</b><br>
+      </td>
+      <td style="width: 253px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 257px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 257px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 243px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Lattazione<br>
+      </td>
+      <td style="width: 257px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Quantità<br>
+      </td>
+      <td style="width: 253px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Durata<br>
+      </td>
+      <td style="width: 257px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">% grasso<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 100px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @latta.each do |@item| %>
+	<%= @item.lattazione %>
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 243px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @latta.each do |@item| %>
+	<%= @item.quantita %> &nbsp; litri
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 253px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @latta.each do |@item| %>
+	<%= @item.durata %> &nbsp; giorni
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 257px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @latta.each do |@item| %>
+	<%= @item.grasso %> &nbsp; %
+	<br />
+	<% end %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table style="text-align: left; width: 834px; height: 104px;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="width: 100px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><b>Fecondazioni</b><br>
+      </td>
+      <td style="width: 150px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 100px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 100px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 150px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+      <td style="width: 157px; background-color: rgb(51, 204, 255);"
+ align="undefined" valign="undefined"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 100px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Lattazione<br>
+      </td>
+      <td style="width: 150px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Data<br>
+      </td>
+      <td style="width: 100px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Sesso v.<br>
+      </td>
+      <td style="width: 100px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Fecond.<br>
+      </td>
+      <td style="width: 150px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Data<br>
+      </td>
+      <td style="width: 157px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined">Toro<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 100px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="top"><br>
+	<% @felat.each do |@item| %>
+	<%= @item.lattazione %>
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 150px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="top"><br>
+	<% @felat.each do |@item| %>
+	<%= @item.data %>
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 100px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="top"><br>
+	<% @felat.each do |@item| %>
+	<%= @item.sesso %>
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 100px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @felat.each do |@item| %>
+	<%= @item.fecondazione %>
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 150px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @felat.each do |@item| %>
+	<%= @item.data %>
+	<br />
+	<% end %>
+      </td>
+      <td style="width: 157px; background-color: rgb(255, 255, 153);"
+ align="undefined" valign="undefined"><br>
+	<% @felat.each do |@item| %>
+	<%= @item.toro %>
+	<br />
+	<% end %>
+      </td>
+    </tr>
+  </tbody>
+  </form>
+</table>
+<br>
+</body>
+</html>

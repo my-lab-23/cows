@@ -1,0 +1,91 @@
+create table Mucca
+(
+	Matricola       char(20) primary key,
+	Nome            char(20),
+	Padre           char(20),
+	Madre           char(20),
+	Data_nascita    date,
+	Peso_nascita    integer
+);
+
+create table Vitello
+(
+	Vitello         integer primary key,
+	Sesso           char(1)
+);
+
+create table Toro
+(
+	Toro            integer primary key,
+	Nome            char(20),
+	Padre           char(20),
+	Madre           char(20)
+);
+
+create table Lattazione
+(
+	Lattazione      char(20) primary key,
+	Data            date
+);
+
+create table Fecondazione
+(
+	Fecondazione    char(20) primary key,
+	Tipologia       char(20),
+	Data            date
+);
+
+create table Qualita
+(
+	Matricola       char(20) references Mucca(Matricola) initially deferred,
+	Lattazione      integer  references Lattazione(Lattazione) initially deferred,
+	Quantita        integer,
+	Durata          integer,
+	Grasso          integer,
+	unique(Matricola, Lattazione)
+);
+
+create table Prima
+(
+	Matricola       char(20) references Mucca(Matricola) initially deferred,
+	Fecondazione    integer  references Fecondazione(Fecondazione) initially deferred,
+	Eta             integer,
+	Peso            integer,
+	unique(Matricola, Fecondazione)
+);
+
+create table Maternita
+(
+	Matricola         char(20) references Mucca(Matricola) initially deferred,
+	Vitello           char(20) references Vitello(Vitello) initially deferred,
+	unique (Matricola, Vitello)
+);
+
+create table Paternita
+(
+	Toro          char(20) references Toro(Toro) initially deferred,
+	Vitello       char(20) references Vitello(Vitello) initially deferred,
+	unique (Toro, Vitello)
+);
+
+create table Nascita
+(
+	Vitello         integer references Vitello(Vitello) initially deferred,
+	Lattazione      integer references Lattazione(Lattazione) initially deferred,
+	unique(Vitello, Lattazione)
+);
+
+create table Gestazione
+(
+	Fecondazione    integer references Fecondazione(Fecondazione) initially deferred,
+	Vitello         integer references Vitello(Vitello) initially deferred,
+	unique(Fecondazione, Vitello)
+);
+
+create table Concluse
+(
+	Fecondazione    integer  references Fecondazione(Fecondazione) initially deferred,
+	Matricola       char(20) references Mucca(Matricola) initially deferred,
+	Toro            char(20) references Toro(Toro) initially deferred,
+	unique(Fecondazione, Matricola, Toro)
+);

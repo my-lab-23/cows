@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>loop</title>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+</head>
+<body style="background-color: rgb(255, 255, 153);">
+<table style="width: 100%; text-align: left;" border="1" cellpadding="2"
+ cellspacing="2">
+
+  <tbody>
+    <form method="post" action="insert_mucca">
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><b>NUOVA MUCCA</b><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Matricola</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("matricola", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);">Data nascita<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("data_nascita", "") %></td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);">Nome<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("nome", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);">Peso nascita<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("peso_nascita", "") %></td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);">Padre<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("padre", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);">Madre<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("madre", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 204, 255);"> <br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);"> <br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);">
+	<input value="Inserisci nuova mucca." type="submit"></form> 
+      </td>
+    </tr>
+    <form method="post" action="insert_prima">
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><b>PRIMA
+FECONDAZIONE</b><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Matricola</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("matricola", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Fecondazione</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("fecondazione", "") %></td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);">Et&agrave;<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("eta", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);">Peso<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("peso", "") %></td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);">Data<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("data", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);">
+	<input value="Inserisci prima fecondazione." type="submit"></form>
+      </td>
+    </tr>
+	<form method="post" action="insert_toro">
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><b>NUOVO TORO</b><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Toro</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("toro", "") %>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);">Nome<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("nome", "") %>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);">Padre<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("padre", "") %>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);">Madre<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("madre", "") %>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);">
+	<input value="Inserisci nuovo toro." type="submit"> </form>
+      </td>
+    </tr>
+	<form method="post" action="insert_fecondazione">
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><b>NUOVA FECONDAZIONE</b><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Fecondazione</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("fecondazione", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);">Tipologia<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("tipologia", "") %></td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);">Data<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("data", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Matricola</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("matricola", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Toro</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("toro", "") %></td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);">
+	<input value="Inserisci nuova fecondazione." type="submit"> </form>
+      </td>
+    </tr>
+	<form method="post" action="insert_lattazione">
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><b>NUOVA LATTAZIONE</b><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Lattazione</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("lattazione", "") %>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);">Data<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("data", "") %>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Vitello</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("vitello", "") %></td>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Fecondazione</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("fecondazione", "") %></td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Matricola</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("matricola", "") %>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"><font color="#FF0000">Toro</font><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("toro", "") %>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);">Sesso vitello<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("sesso", "") %>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);">Quantit&agrave;<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("quantita", "") %>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 255, 153);"> Durata<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("durata", "") %>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);">Grasso<br>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);"> <%= text_field("grasso", "") %>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(51, 204, 255);"> <br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);"><br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);"> <br>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);">
+	<input value="Inserisci nuova lattazione." type="submit"></form>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

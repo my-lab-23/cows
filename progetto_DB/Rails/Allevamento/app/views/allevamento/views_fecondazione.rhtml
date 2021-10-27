@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title></title>
+</head>
+<body style="background-color: rgb(255, 255, 153);">
+<table style="width: 100%; text-align: left;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(51, 204, 255);">
+	<b>FECONDAZIONE</b><br>
+	<% @items.each do |@item| %>
+	<%= @item.fecondazione %>
+	<br />
+	<% end %>
+      </td>
+      <td style="background-color: rgb(255, 255, 153);">
+	<b>TIPOLOGIA</b><br>
+	<% @items.each do |@item| %>
+	<%= @item.tipologia %>
+	<br />
+	<% end %>
+      </td>
+      <td style="background-color: rgb(51, 204, 255);">
+	<b>DATA</b><br>
+	<% @items.each do |@item| %>
+	<%= @item.data %>
+	<br />
+	<% end %>
+      </td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
